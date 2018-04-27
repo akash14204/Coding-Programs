@@ -21,6 +21,52 @@ class TaskA{
 
 
 
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+    static class B{
+    int a;
+    int b;
+    B(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    int first(){
+        return a;
+    }
+    int second(){
+        return b;
+    }
+}
+
+static class Mycomparater implements Comparator<B>{
+    public int compare(B b1,B b2){
+        Integer k1=b1.first();
+        Integer k2=b2.first();
+        
+        return k2.compareTo(k1);
+    }
+}
+
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		ArrayList<B> al =new ArrayList();
+		al.add(new B(1,10));
+		al.add(new B(2,11));
+		
+		Collections.sort(al,new Mycomparater());
+		B b2=al.get(0);
+		System.out.println(b2.first());	
+	}
+}
+/* package codechef; // don't place package name! */
 
 
 
